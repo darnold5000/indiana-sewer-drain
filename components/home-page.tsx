@@ -12,48 +12,42 @@ const services = [
     copy: "Clearing slow and clogged drains and getting water moving again.",
     cta: "I have a clogged drain",
     value: "Clogged / Slow Drain" as ServiceOption,
-    image:
-      "https://images.unsplash.com/photo-1585705277755-d99cf4f4f580?auto=format&fit=crop&w=800&q=80",
+    image: "/images/services/drain-cleaning.jpg",
   },
   {
     title: "Sewer Line Service",
     copy: "Help diagnosing sewer backups, blockages, and line problems.",
     cta: "I have a sewer problem",
     value: "Sewer Line Problem" as ServiceOption,
-    image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+    image: "/images/services/sewer-line.jpg",
   },
   {
     title: "Camera Inspections",
     copy: "See what's happening inside the line before making decisions about repairs.",
     cta: "Schedule an inspection",
     value: "Camera Inspection" as ServiceOption,
-    image:
-      "https://images.unsplash.com/photo-1581094794329-cd9f6c8b5c2b?auto=format&fit=crop&w=800&q=80",
+    image: "/images/services/camera-inspection.jpg",
   },
   {
     title: "Water Heaters",
     copy: "Water heater diagnosis, repair, replacement, and installation.",
     cta: "Water heater help",
     value: "Water Heater" as ServiceOption,
-    image:
-      "https://images.unsplash.com/photo-1621905252507-b35492da745b?auto=format&fit=crop&w=800&q=80",
+    image: "/images/services/water-heater.jpg",
   },
   {
     title: "Sinks & Faucets",
     copy: "Repairs, replacements, leaks, and fixture installation.",
     cta: "Sink or faucet help",
     value: "Sink / Faucet" as ServiceOption,
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    image: "/images/services/sink-faucet.jpg",
   },
   {
     title: "Toilets & Urinals",
     copy: "Repair, replacement, installation, and drainage issues.",
     cta: "Toilet help",
     value: "Toilet / Urinal" as ServiceOption,
-    image:
-      "https://images.unsplash.com/photo-1584622781864-3294c7d5b0c3?auto=format&fit=crop&w=800&q=80",
+    image: "/images/services/toilet.jpg",
   },
 ];
 
