@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   description:
     "Sewer, drain, and plumbing service in Camby and Central Indiana. Request service online, send photos, and get a direct response from Indiana Sewer & Drain LLC.",
   robots: { index: false, follow: false },
+  icons: {
+    icon: [{ url: "/logo.png", type: "image/png" }],
+    apple: "/logo.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -35,9 +39,7 @@ export const metadata: Metadata = {
     title: `${site.shortName} | Sewer, Drain & Plumbing`,
     description:
       "Fast help when things stop flowing. Sewer, drain, and plumbing service throughout Central Indiana.",
-  },
-  icons: {
-    icon: "/favicon.svg",
+    images: [{ url: "/logo.png", width: 512, height: 512, alt: site.businessName }],
   },
 };
 

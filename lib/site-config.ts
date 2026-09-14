@@ -11,6 +11,9 @@ export const site = {
   facebookUrl: "https://www.facebook.com/",
   serviceAreaPrimary: "Camby, Indiana",
   serviceAreaHeadline: "Serving Camby and Central Indiana",
+  /** Google Maps embed (no API key) — centered on Camby, wider view for Central Indiana */
+  mapEmbedUrl: "https://maps.google.com/maps?q=Camby,+IN+46113&hl=en&z=10&output=embed",
+  mapLink: "https://www.google.com/maps/search/?api=1&query=Camby,+IN+46113",
   /** Cities to enable once confirmed by the owner */
   serviceAreaCitiesPending: [
     "Mooresville",

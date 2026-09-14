@@ -13,13 +13,3 @@ export function IconPhone() {
     </svg>
   );
 }
-
-export function LogoMark() {
-  return (
-    <svg className="logo-mark" viewBox="0 0 48 48" aria-hidden="true">
-      <circle cx="24" cy="24" r="22" />
-      <path d="M14 30c4-8 8-12 10-12s6 4 10 12" />
-      <path d="M18 18h12M24 12v6" />
-    </svg>
-  );
-}

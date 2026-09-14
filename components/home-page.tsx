@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { IconArrow, IconPhone, LogoMark } from "@/components/icons";
-import { LeadNotificationVisual } from "@/components/lead-notification-visual";
+import { IconArrow, IconPhone } from "@/components/icons";
 import { ServiceRequestForm, scrollToServiceForm } from "@/components/service-request-form";
 import { site, type ServiceOption } from "@/lib/site-config";
 
@@ -85,11 +84,14 @@ export function HomePage() {
     <>
       <header className="site-header">
         <a className="brand" href="#top" aria-label={`${site.shortName} home`}>
-          <LogoMark />
-          <span>
-            <b>Indiana Sewer</b>
-            <small>&amp; DRAIN LLC</small>
-          </span>
+          <Image
+            className="brand__logo"
+            src="/logo.png"
+            alt=""
+            width={56}
+            height={56}
+            priority
+          />
         </a>
         <nav className={menuOpen ? "open" : ""} aria-label="Main navigation">
           <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
@@ -156,15 +158,14 @@ export function HomePage() {
       </section>
 
       <section className="lead-band" id="service-request">
-        <div className="lead-band__intro">
-          <p className="eyebrow eyebrow--green">SERVICE REQUEST</p>
-          <h2>Tell us what&apos;s going on.</h2>
-          <p>
-            Send a few details and Indiana Sewer &amp; Drain can respond directly about your service request.
-          </p>
-          <LeadNotificationVisual />
-        </div>
         <div className="lead-band__form">
+          <header className="lead-band__head">
+            <p className="eyebrow eyebrow--green">SERVICE REQUEST</p>
+            <h2>Tell us what&apos;s going on.</h2>
+            <p>
+              Send a few details and Indiana Sewer &amp; Drain can respond directly about your service request.
+            </p>
+          </header>
           <ServiceRequestForm preselectedService={preselectedService} />
         </div>
       </section>
@@ -289,17 +290,33 @@ export function HomePage() {
         <div className="section-head">
           <h2>{site.serviceAreaHeadline}.</h2>
         </div>
-        <div className="service-area__primary">
-          <span className="service-area__pin" aria-hidden="true">◎</span>
-          <div>
-            <strong>{site.serviceAreaPrimary}</strong>
-            <p>Additional cities can be added here once confirmed.</p>
+        <div className="service-area__layout">
+          <div className="service-area__info">
+            <div className="service-area__primary">
+              <span className="service-area__pin" aria-hidden="true">◎</span>
+              <div>
+                <strong>{site.serviceAreaPrimary}</strong>
+                <p>Additional cities can be added here once confirmed.</p>
+              </div>
+            </div>
+            <p className="service-area__zip">
+              Not sure if you&apos;re in the service area? Enter your ZIP code in the service request form or{" "}
+              <button type="button" className="text-link" onClick={() => scrollToServiceForm()}>send a request</button>.
+            </p>
+            <a className="service-area__maps-link" href={site.mapLink} target="_blank" rel="noopener noreferrer">
+              Open in Google Maps
+            </a>
+          </div>
+          <div className="service-area__map">
+            <iframe
+              title={`Map of ${site.serviceAreaPrimary} and surrounding Central Indiana`}
+              src={site.mapEmbedUrl}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
         </div>
-        <p className="service-area__zip">
-          Not sure if you&apos;re in the service area? Enter your ZIP code in the service request form or{" "}
-          <button type="button" className="text-link" onClick={() => scrollToServiceForm()}>send a request</button>.
-        </p>
       </section>
 
       <section className="urgent-cta">
